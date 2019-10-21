@@ -29,13 +29,13 @@
     <div style="padding: 1%;">
         <h1 class="h1-blk">Discover New Solutions</h1>
         <div class="rowx">
-        {% for i in range(0,10) %}
+        {% for key in redis.keys() %}
         <div class="colx-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title"><img style="width: 40px; border-radius: 16px; margin-right: 10px;" src="./resources/img/pp.png">Fuel Tracker</h5>
+                        <h5 class="card-title"><img style="width: 40px; border-radius: 16px; margin-right: 10px;" src="./resources/img/pp.png">{{redis.hget(key,"title").decode('utf-8')}}</h5>
                         <h6 class="card-subtitle mb-2 text-muted" style="margin-left: 50px;"> <img style="width: 10px; margin-right: 5px;" src="./resources/img/hotel.png">Geotab Inc.</h6>
-                        <p class="card-text">The moment a Cummins engine system fault occurs, the Geotab device transmits key engine system... </p>
+                        <p class="card-text">{{redis.hget(key,"overview").decode('utf-8')}}</p>
                         <button type="button" class="btn btn-success">Install</button>
                         <button type="button" class="btn btn-light">Request info</button>
                     </div>

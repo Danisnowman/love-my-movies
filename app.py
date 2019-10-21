@@ -1,6 +1,5 @@
 from flask import Flask, jsonify, render_template, request
 from db import *
-# import requests as rq
 import os
 app = Flask(__name__)
 
@@ -13,13 +12,13 @@ environment=os.getenv("ENVIROMENT","development")
 
 db = db(api_key)
 db.start()
+# print(db.r.hget("Joker","id").decode('utf-8'))
 
 
-# rq.get(f"https://api.themoviedb.org/3/movie/76341?api_key={api_key}")
-
+redis=db.r
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("index.html", redis=redis)
 
 
 

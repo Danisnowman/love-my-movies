@@ -23,12 +23,11 @@ class db:
 
 
     def saveMovies(self, eachMovie):
-        # print(eachMovie)
         with self.r.pipeline() as pipe:
-            # json_movies = json.dumps(eachMovie)
             for eachMovie in eachMovie:
+                pipe.hset(eachMovie.title, "title" ,eachMovie.title)
+                pipe.hset(eachMovie.title, "overview" ,eachMovie.overview)
                 pipe.hset(eachMovie.title, "poster_path" ,eachMovie.poster_path)
                 pipe.hset(eachMovie.title, "vote_count", eachMovie.vote_count)
                 pipe.hset(eachMovie.title, "id", eachMovie.id)
-
             pipe.execute()    
