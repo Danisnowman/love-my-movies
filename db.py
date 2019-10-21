@@ -1,5 +1,5 @@
 from tmdbv3api import TMDb, Movie
-import redis, random, json
+import redis
 
 
 class db:
@@ -12,7 +12,7 @@ class db:
 
     def start(self):
         movie = Movie()
-        self.redis_server = redis.StrictRedis(host='localhost', port=6379, db=0)
+        self.redis_server = redis.StrictRedis(host='docker_redis', port=6379, db=0)
         tmdb = TMDb()
         tmdb.api_key = self.api_key
         self.getPopular(movie)

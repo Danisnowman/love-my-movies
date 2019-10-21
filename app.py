@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 
 
-# developer = os.getenv("DEVELOPER", "Me")
+developer = os.getenv("DEVELOPER", "Me")
 api_key=os.getenv("API_KEY","0")
 environment=os.getenv("ENVIROMENT","development")
 
