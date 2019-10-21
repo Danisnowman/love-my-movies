@@ -1,9 +1,9 @@
 language: python
 python: "3.7.3"
 env:
-  - ENVIROMENT=development
   global:
     secure: M8+JvHzQX11oSeDMF2iiwH2JesKkCG5n9uvLbV/9oY8z7oG56sFqmwmAYl0WOwT6H6/t4VTQbNbIx5XA0Z0qWXp/7k+KUdi0X4iMU7JNZbYYcIvEPSmQTnecKl8yoc7piFI7H9gX9GruHqElyC71TZNT4Ff284n2cD3kVluRHU03S0qst1Nz9N+m8n+vpnbi3euS5PUCOwVc2hisKpuFLJxospYzI+9pmhd0R4tJES3bx0pVCIrd7u6BEVt8DGlk2imPK83RsLJry3TLBfp0sZ6wyhpAM/ey8AmWiuXQvylXcARhksCZP6V2WGFDIS63ZULdNv5cCCchqD2lo23fDdzgudrfiHG4ChU9evrv6akEzTYOtIJdInhBXkKW6Uj32YMiWBCDdvdVlw+P709/PvuIRYbQcnFaaep4nilQgJWBqZMjr4F0eFPqHs38bKLVmiJ3ZAYPVdZM3VidNimuoR60o769ZvLOJ8WQIvuErCmJCPwxE8Bfp+pGPwUrdYEAZ0FbzLRfpbqE7Nb7GVkYIBvHpvcOvedpHWNICoVvdL0bigIk619+n3TSk5O+2PJwPnIb8JkcJNP+Y7xdBArl7mqpaEpLKK3+U4M1OGFJaFzfHWlvEB/k5APJdNEsW7xOe/FJjAtw9aI0OGLeCo36g/kniLsLKrilcXpQcVXDiQo=
+    - ENVIROMENT="development"
 install:
   - pip install -r requirements.txt
 # command to run tests
