@@ -15,10 +15,10 @@ db.start()
 # print(db.r.hget("Joker","id").decode('utf-8'))
 
 
-redis=db.r
+redis_server=db.redis_server
 @app.route("/")
 def home():
-    return render_template("index.html", redis=redis)
+    return render_template("index.html", redis_server=redis_server)
 
 
 

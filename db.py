@@ -4,7 +4,7 @@ import redis, random, json
 
 class db:
     api_key = ""
-    r = None
+    redis_server = None
     
     def __init__(self, api_key):
         self.api_key = api_key
@@ -12,7 +12,7 @@ class db:
 
     def start(self):
         movie = Movie()
-        self.r = redis.StrictRedis(host='localhost', port=6379, db=0)
+        self.redis_server = redis.StrictRedis(host='localhost', port=6379, db=0)
         tmdb = TMDb()
         tmdb.api_key = self.api_key
         self.getPopular(movie)
@@ -23,7 +23,7 @@ class db:
 
 
     def saveMovies(self, eachMovie):
-        with self.r.pipeline() as pipe:
+        with self.redis_server.pipeline() as pipe:
             for eachMovie in eachMovie:
                 pipe.hset(eachMovie.title, "title" ,eachMovie.title)
                 pipe.hset(eachMovie.title, "overview" ,eachMovie.overview)
