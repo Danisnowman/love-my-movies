@@ -2,7 +2,6 @@ from tmdbv3api import TMDb, Movie
 import redis, random, json
 
 
-
 class db:
     api_key = ""
     r = None
@@ -22,21 +21,6 @@ class db:
         popular = movie.popular()
         self.saveMovies(popular)
 
-    # def addMoviesToList(self, movies):
-    #     movie_list = []
-    #     for eachMovie in movies:
-    #         self.saveMovies(eachMovie)
-    #         # cleared_movie = {
-    #         #         f"{eachMovie.title}" : {
-    #         #         "poster_path" : f"{eachMovie.poster_path}",
-    #         #         "overview" : f"{eachMovie.overview}",
-    #         #         "vote_count" : f"{eachMovie.vote_count}",
-    #         #         "imdb_id" : f"{eachMovie.imdb_id}"
-    #         #     }
-    #         # }
-    #         # cleared_movie = customMovie(eachMovie.poster_path,eachMovie.title, eachMovie.id, eachMovie.overview, eachMovie.vote_count)
-    #         movie_list.append(cleared_movie)
-    #     self.saveMovies(movie_list)
 
     def saveMovies(self, eachMovie):
         # print(eachMovie)
