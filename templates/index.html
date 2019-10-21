@@ -33,14 +33,19 @@
         <div class="colx-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title"><img style="width: 40px; border-radius: 16px; margin-right: 10px;" src="https://image.tmdb.org/t/p/w500{{redis_server.hget(key,'poster_path').decode('utf-8')}}">{{redis_server.hget(key,"title").decode('utf-8')}}</h5>
+                        <h5 class="card-title"><img style="width: 80px; border-radius: 0px; margin-right: 10px;" src="https://image.tmdb.org/t/p/w500{{redis_server.hget(key,'poster_path').decode('utf-8')}}">{{redis_server.hget(key,"title").decode('utf-8')}}</h5>
                         <h6 class="card-subtitle mb-2 text-muted" style="margin-left: 50px;"> <img style="width: 10px; margin-right: 5px;" src="./resources/img/hotel.png">Geotab Inc.</h6>
                         <p class="card-text">{{redis_server.hget(key,"overview").decode('utf-8')}}</p>
-                        <button type="button" class="btn btn-success">Install</button>
-                        <button type="button" class="btn btn-light">Request info</button>
+                        <div>
+                            <button type="button" class="btn btn-info">Up</button>
+                            <td>
+                                <p class="counter" align="center">{{redis_server.hget(key,"vote_count").decode('utf-8')}}</p>
+                            </td>
+                            <button type="button" class="btn btn-danger">Down</button></div>
+                        </div>
                     </div>
                 </div>
-            </div>
+        </div>
         {% endfor %}
         
     </div>
