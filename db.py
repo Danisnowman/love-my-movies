@@ -5,14 +5,21 @@ import redis
 class db:
     api_key = ""
     redis_server = None
+    enviroment = ""
     
-    def __init__(self, api_key):
+    def __init__(self, api_key, enviroment):
         self.api_key = api_key
-
+        self.enviroment=enviroment
+    
 
     def start(self):
         movie = Movie()
-        self.redis_server = redis.StrictRedis(host='docker_redis', port=6379, db=0)
+        if self.enviroment == "development":
+            self.enviroment="localhost"
+        else:
+            self.enviroment="docker_redis"
+
+        self.redis_server = redis.StrictRedis(host=self.enviroment, port=6379, db=0)
         tmdb = TMDb()
         tmdb.api_key = self.api_key
         self.getPopular(movie)

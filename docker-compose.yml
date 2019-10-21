@@ -3,6 +3,7 @@ services:
     web:
         environment:
             - API_KEY=${API_KEY}
+            - ENVIROMENT=prod
         build: .
         ports:
             - "5000:5000"

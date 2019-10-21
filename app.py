@@ -10,7 +10,7 @@ api_key=os.getenv("API_KEY","0")
 environment=os.getenv("ENVIROMENT","development")
 
 
-db = db(api_key)
+db = db(api_key, environment)
 db.start()
 # print(db.r.hget("Joker","id").decode('utf-8'))
 
