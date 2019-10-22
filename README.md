@@ -47,9 +47,6 @@ The app will look like this:
 > here only one box is shown, obviously you will work with a variable list of movies.
 
 # Usage
-
-> Fill this with your instructions on how to run your app.
-
 ## To run the app just do:
 ```bash
 
