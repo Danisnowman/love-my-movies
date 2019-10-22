@@ -12,7 +12,7 @@ python:
 install:
   - pip install -r requirements.txt
 # command to run tests
-script: docker-compose up
+script: pytest
 
 deploy:
   provider: heroku
@@ -21,6 +21,8 @@ deploy:
   app: love-my-movies
   on:
     repo: Danisnowman/love-my-movies
+  run: 
+    - docker-compose up
 
 # services:
 #   - redis
