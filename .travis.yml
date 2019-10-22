@@ -9,6 +9,14 @@ install:
 # command to run tests
 script: pytest
 
+deploy:
+  provider: heroku
+  api_key:
+    secure: "QmdZgM1+Ffpl+y0fUNvUdUDTE2j4suKzcGNxYMNrTGnb6N3drz8OWgHFRwVu8WvtgYbD/DHSFm3jM/FhYnRt8zLpqVbuTDBgGybFK3aYhbdmR4PSWW0bvV+Pq2BvHVvahmzzkCORz2pyQRSNyfbtlrfEGe2Egm3Kx2eCM55FdOKU5JuQKoCk3M6UzXD0r4eeCC5qghge5Q1AVlanpVHf/7t+xiAuS+Oo26rVFDR6bNOhJHcnAY27NOli3zc26asr4tDhuw9TeJJ2K0Q6j/wcp95PV06FZCDpZIku3owzlKL8zORo+YwozQhBILKNuDnga5hZ5vQghuZHeT0r3zmz59XazNDBWKeU2vS9Ow0dJSxU5dKF24sjcjBF9DixkcnQbuuDvZL/CVxLji71pK9CKKw5ZCvEJGOhxKmdYnDzDOLFE5MBK+UZcZ72U6b5KYz97SX6leq4au72wLMyL/r5j1WZsFCP78Nmqmworw9e/U7IH91Usrto3yv6mIEPXGsKOgB35eec4VY7tlKGBuGyxWKKfvJmwhrNDv3rlmUiovDUcbuIoCPaMURIb4h6EmqGXa7EAGNXq1c6knBsD+uRF4R/RFZauLeMuPLTuE9mpNHuqn8+y+a09ody3RnhNBM6yqXEAFsuHeeQVGybEEiz50BT3i01MmlLiXulq8PHf0U="
+  app: love-my-movies
+  on:
+    repo: Danisnowman/love-my-movies
+
 # services:
 #   - redis
 # language: python
