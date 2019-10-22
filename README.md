@@ -11,7 +11,7 @@ We are going to reuse this design to have a "Like/Dislike | Recommend/Not Recomm
 
 - [:movie_camera: Result](#moviecamera-result)
 - [Usage](#usage)
-  - [To run the app just do:](#to-run-the-app-just-do)
+  - [To run the app run:](#to-run-the-app-run)
 - [The Movie Database API](#the-movie-database-api)
 - [Some Examples](#some-examples)
   - [Discover Movies](#discover-movies)
@@ -47,7 +47,7 @@ The app will look like this:
 > here only one box is shown, obviously you will work with a variable list of movies.
 
 # Usage
-## To run the app just do:
+## To run the app run:
 ```bash
 
 docker-compose up
