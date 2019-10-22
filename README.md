@@ -48,6 +48,7 @@ The app will look like this:
 
 # Usage
 ## To run the app run:
+> You could get the image from [dockerhub](https://hub.docker.com/r/danisnowman/love-my-movies_web/builds)
 ```bash
 
 docker-compose up
