@@ -14,5 +14,3 @@ services:
     docker_redis:
         image: redis
 
-after_success:
-    - sh deploy_dockerhub.sh
